@@ -124,13 +124,13 @@ map = (function () {
                 popup.style.left = (pixel.x + 0) + 'px';
                 popup.style.top = (pixel.y + 0) + 'px';
                 
-                if ( scene.selection.feature.properties.kind == [supermarket, grocery-store, health_food, greengrocer] || scene.selection.feature.properties.kind == [supermarket, grocery-store, health_food, greengrocer] ) 
+                if ( scene.selection.feature.properties.kind == 'supermarket' || scene.selection.feature.properties.kind == 'grocery-store' || scene.selection.feature.properties.kind == 'health_food' || scene.selection.feature.properties.kind == 'greengrocer' ) 
                 {
 	                popup.style.visibility = 'visible';
 	            }
                 popup.innerHTML = '<span class="labelInner">' + 'You found a grocery store to enhance!' + '</span><br>';
-                popup.innerHTML += '<span class="labelInner">' + '<a target="_blank" href="' + url + '" onclick="trackOutboundLink("' + url + ', residential_buildings"); return false;">Edit with iD ➹</a>' + '</span><br>';
-                popup.innerHTML += '<span class="labelInner">' + '<a target="_blank" href="' + josmUrl + '" onclick="trackOutboundLink("' + josmUrl + ', residential_buildings"); return false;">Edit with JOSM ➹</a>' + '</span><br>';
+                popup.innerHTML += '<span class="labelInner">' + '<a target="_blank" href="' + url + '" onclick="trackOutboundLink("' + url + ', nyr-grocery"); return false;">Edit with iD ➹</a>' + '</span><br>';
+                popup.innerHTML += '<span class="labelInner">' + '<a target="_blank" href="' + josmUrl + '" onclick="trackOutboundLink("' + josmUrl + ', nyr-grocery"); return false;">Edit with JOSM ➹</a>' + '</span><br>';
             });
         });
 
