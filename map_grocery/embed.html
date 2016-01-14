@@ -52,7 +52,6 @@
     }
 
     .labelInner {
-        padding: 3px 0px;
         font-family: Helvetica, sans-serif;
         font-size: 16px;
         color: white;
@@ -97,19 +96,13 @@
     <!-- Mapzen map UI -->
     <script src='lib/mapzen-ui.min.js'></script>
 	<script>
-	/**
-	* Function that tracks a click on an outbound link in Google Analytics.
-	* This function takes a valid URL string as an argument, and uses that URL string
-	* as the event label. Setting the transport method to 'beacon' lets the hit be sent
-	* using 'navigator.sendBeacon' in browser that support it.
-	*/
-	var trackOutboundLink = function(url, post_name) {
-       // ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue], [fieldsObject]);
-	   ga('send', 'event', 'outbound_new_years_resolutions_grocery', post_name, url, {
-		 'transport': 'beacon',
-		 'hitCallback': function(){document.location = url;}
-	   });
-	}
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-47035811-1', 'auto');
+	  ga('send', 'pageview');
 	</script>
 
     <style>

@@ -129,8 +129,8 @@ map = (function () {
 	                popup.style.visibility = 'visible';
 	            }
                 popup.innerHTML = '<span class="labelInner">' + 'You found a grocery store to enhance!' + '</span><br>';
-                popup.innerHTML += '<span class="labelInner">' + '<a target="_blank" href="' + url + '" onclick="trackOutboundLink("' + url + ', nyr-grocery"); return false;">Edit with iD ➹</a>' + '</span><br>';
-                popup.innerHTML += '<span class="labelInner">' + '<a target="_blank" href="' + josmUrl + '" onclick="trackOutboundLink("' + josmUrl + ', nyr-grocery"); return false;">Edit with JOSM ➹</a>' + '</span><br>';
+                popup.appendChild(createEditLinkElement(url, 'iD', 'Edit with iD ➹'));
+                popup.appendChild(createEditLinkElement(josmUrl, 'JOSM', 'Edit with JOSM ➹'));
             });
         });
 
@@ -138,6 +138,37 @@ map = (function () {
             info.style.visibility = 'hidden';
             popup.style.visibility = 'hidden';
         });
+    }
+
+    function createEditLinkElement (url, type, label) {
+        var el = document.createElement('div');
+        var anchor = document.createElement('a');
+        el.className = 'labelInner';
+        anchor.href = url;
+        anchor.target = '_blank';
+        anchor.textContent = label;
+        anchor.addEventListener('click', function (event) {
+            trackOutboundLink(url, 'editing_residential_buildings', type);
+        }, false);
+        el.appendChild(anchor);
+        return el;
+    }
+
+    /**
+    * Function that tracks a click on an outbound link in Google Analytics.
+    * This function takes a valid URL string as an argument, and uses that URL string
+    * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+    * using 'navigator.sendBeacon' in browser that support it.
+    */
+    function trackOutboundLink (url, post_name, editor) {
+       // ga('send', 'event', [eventCategory], [eventAction], [eventLabel], [eventValue], [fieldsObject]);
+       ga('send', 'event', 'outbound', post_name, url, {
+         'transport': 'beacon',
+         // If opening a link in the current window, this opens the url AFTER
+         // registering the hit with Analytics. Disabled because here want the
+         // link to open in a new window, so this hit can occur in the current tab.
+         //'hitCallback': function(){document.location = url;}
+       });
     }
 
 	function long2tile(lon,zoom) { return (Math.floor((lon+180)/360*Math.pow(2,zoom))); }
@@ -199,6 +230,4 @@ map = (function () {
     });
 
     return map;
-
 }());
-
