@@ -233,17 +233,11 @@ hr {
   background: url('../images/bg_hr.png') repeat-x center;
 }
 
-table.rounded-corners tr:first-child td:first-child {
-  border-top-left-radius: 5px;
-}
-table.rounded-corners tr:first-child td:last-child {
-  border-top-right-radius: 5px;
-}
-table.rounded-corners tr:last-child td:first-child {
-  border-bottom-left-radius: 5px;
-}
-table.rounded-corners tr:last-child td:last-child {
-  border-bottom-right-radius: 5px;
+table {
+  border: 1px solid #485D70;
+  border-radius: 24px;
+  margin-bottom: 20px;
+  text-align: left;
 }
 
 th {
