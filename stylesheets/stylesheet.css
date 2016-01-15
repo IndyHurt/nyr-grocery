@@ -237,6 +237,8 @@ table {
   border: 1px solid #485D70;
   margin-bottom: 20px;
   text-align: left;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
  }
 
 th {
