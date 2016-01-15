@@ -235,8 +235,8 @@ hr {
 
 table {
   border-collapse:separate;
-  border: 1px solid #485D70;
-  border-radius: 6px;
+  border:solid #485D70 1px;
+  border-radius:6px;
   margin-bottom: 20px;
   text-align: left;
   -moz-border-radius:6px;
@@ -257,7 +257,7 @@ th {
 
 td:first-child {
   padding: 10px;
-  border: 1px solid #485D70;
+  border:solid #485D70 1px;
   border-left: none;
  }
 
