@@ -242,8 +242,6 @@ table {
 th:first-child {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-radius: 6px 0 0 0;
-  
-  border-radius: 6px 6px 0 0;
   padding: 10px;
   background: #485D70;
   color: #fff;
