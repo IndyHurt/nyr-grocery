@@ -246,6 +246,18 @@ th {
   color: #fff;
  }
 
+table.rounded-corners tr:first-child td:first-child {
+  border-top-left-radius: 5px;
+}
+table.rounded-corners tr:first-child td:last-child {
+  border-top-right-radius: 5px;
+}
+table.rounded-corners tr:last-child td:first-child {
+  border-bottom-left-radius: 5px;
+}
+table.rounded-corners tr:last-child td:last-child {
+  border-bottom-right-radius: 5px;
+}
 
 td {
   padding: 10px;
