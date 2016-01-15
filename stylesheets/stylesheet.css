@@ -259,10 +259,7 @@ table.rounded-corners tr:last-child td:last-child {
   border-bottom-right-radius: 5px;
 }
 
-td {
-  padding: 10px;
-  border: 1px solid #485D70;
- }
+
 
 form {
   background: #f2f2f2;
