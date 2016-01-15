@@ -235,6 +235,9 @@ hr {
 
 table {
   border: 1px solid #485D70;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
   margin-bottom: 20px;
   text-align: left;
 }
