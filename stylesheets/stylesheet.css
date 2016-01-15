@@ -239,15 +239,27 @@ table {
   text-align: left;
 }
 
-th {
+th:first-child {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border-radius: 6px 0 0 0;
-  border-radius: 0 6px 0 0;
+  
   border-radius: 6px 6px 0 0;
   padding: 10px;
   background: #485D70;
   color: #fff;
  }
+
+th:last-child {
+  
+  border-radius: 0 6px 0 0;
+
+}
+
+th:only-child {
+  
+  border-radius: 6px 6px 0 0;
+
+}
 
 td {
   padding: 10px;
