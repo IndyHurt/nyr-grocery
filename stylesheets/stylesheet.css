@@ -1,5 +1,5 @@
 /*******************************************************************************
-Slate Theme for GitHub Pages
+Adapted from the Slate Theme for GitHub Pages
 by Jason Costello, @jsncostello
 *******************************************************************************/
 
@@ -234,12 +234,12 @@ hr {
 }
 
 table {
+  border-radius: 25px;
   border: 1px solid #485D70;
+  padding: 20px;
   margin-bottom: 20px;
   text-align: left;
-  border-bottom-left-radius: 2px;
-  border-bottom-right-radius: 2px;
- }
+}
 
 th {
   font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
