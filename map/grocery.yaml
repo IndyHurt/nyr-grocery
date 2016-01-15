@@ -97,7 +97,7 @@ zinc-light-gray-colors:
         - &path_bridge_casing2        grey                # zoomed out
         - &path_steps1                grey
         - &path_steps1_b              '#dadada'
-        
+
     boundaries:
         - &country_boundary           [0.3,0.3,0.3]
         - &region_boundary            [0.4,0.4,0.4]
@@ -167,7 +167,7 @@ zinc-light-gray-colors:
         - &building2   [.1, .1, .1]        # building stroke
         - &building_o  25                  # building stroke order
         - &building_e  false               # building extrude
-    
+
     labels:
         - &text_fill         [0.2, 0.2, 0.2]    # BLACK
         - &text_fill2        '#555'             # WHITE
@@ -498,13 +498,13 @@ styles:
                     float xMargin(vec2 st,float margin){
                         return 1.0-clamp(step(margin*.5,st.x)*step(margin*.5,1.0-st.x),0.,1.);
                     }
-                    
+
                     //  Function from Iñigo Quiles
                     //  https://www.shadertoy.com/view/MsS3Wc
                     vec3 hsb2rgb( in vec3 c ){
                         vec3 rgb = clamp(abs(mod(c.x*6.0+vec3(0.0,4.0,2.0),
-                                                 6.0)-3.0)-1.0, 
-                                         0.0, 
+                                                 6.0)-3.0)-1.0,
+                                         0.0,
                                          1.0 );
                         rgb = rgb*rgb*(3.0-2.0*rgb);
                         return c.z * mix(vec3(1.0), rgb, c.y);
@@ -726,22 +726,6 @@ layers:
                     fill: '#00ffff'
                     size: 12px
                     stroke: { color: '#cdbbd7', width: 2 }
-#        matched:
-#            filter:
-#                name: false
-#            draw:
-#                icons:
-#                    sprite: grocery-store
-#                    color: aqua
-#                    visible: true
-#                    priority: 1
-#                text:
-#                    offset: [[13,6px],[16,8px],[19,10px]]
-#                    priority: 2
-#                    anchor: bottom
-#                    font:
-#                        fill: black
-#                        stroke: { color: '#00ffff', width: 4 }
 
     grocery_to_enhance:
         data: { source: osm, layer: [buildings] }
@@ -1560,7 +1544,7 @@ layers:
                 draw:
                     lines:
                         order: 15
-            
+
             in_park:
                 filter: { landuse_kind: [park,protected_area,nature_reserve,conservation,golf_course,garden,wood,farmland,farm] }
                 draw:
@@ -2081,7 +2065,7 @@ layers:
 #            draw:
 #                polygons:
 #                    color: orange
-                
+
     building-labels:
         data: { source: osm, layer: buildings }
         filter:
@@ -5130,7 +5114,7 @@ layers:
                     order: 3
                     color: *grey1
                     visible: *grey1_v
-                    
+
     landuse_urban_area-early:
         data: { source: osm, layer: landuse }
         filter:
