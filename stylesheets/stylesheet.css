@@ -243,8 +243,8 @@ table {
 }
 
 td, th {
-  border-left:solid #485D70 .5px;
-  border-top:solid #485D70 .5px;
+  border-left:solid #485D70 1px;
+  border-top:solid #485D70 1px;
 }
 
 th {
