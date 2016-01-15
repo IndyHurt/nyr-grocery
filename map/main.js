@@ -148,7 +148,7 @@ map = (function () {
         anchor.target = '_blank';
         anchor.textContent = label;
         anchor.addEventListener('click', function (event) {
-            trackOutboundLink(url, 'editing_residential_buildings', type);
+            trackOutboundLink(url, 'editing_grocery', type);
         }, false);
         el.appendChild(anchor);
         return el;
