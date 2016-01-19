@@ -723,7 +723,7 @@ layers:
                     family: Helvetica
                     weight: 500
                     style: italic
-                    fill: '#ffffff'
+                    fill: '#000000'
                     size: 12px
                     stroke: { color: '#cdbbd7', width: 2 }
 
