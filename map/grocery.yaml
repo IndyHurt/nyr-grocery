@@ -725,7 +725,7 @@ layers:
                     style: italic
                     fill: '#000000'
                     size: 12px
-                    stroke: { color: '#d1eeee', width: 2 }
+                    stroke: { color: aqua, width: 2 }
 
     grocery_to_enhance:
         data: { source: osm, layer: [buildings] }
