@@ -6,10 +6,10 @@ New Year's Resolutions - Grocery POIs
 ## Parts
 
 * Blog post - [index.html](index.html)
-* Small map for blog post - [map_grocery/embed.html](map/embed.html)
-* Big map - [map_grocery/index.html](map_grocery/index.html)
-* Scene file (powers the map) - [map_grocery/grocery.yaml](map_grocery/grocery.yaml#L697-L747)
-* Map interactivity - [map_grocery/main.js](map/main.js)
+* Small map for blog post - [map/embed.html](map/embed.html)
+* Big map - [map/index.html](map/index.html)
+* Scene file (powers the map) - [map/grocery.yaml](map/grocery.yaml#L697-L747)
+* Map interactivity - [map/main.js](map/main.js)
 
 
 ### To run locally:
