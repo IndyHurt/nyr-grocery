@@ -239,7 +239,7 @@ table {
   border-radius:6px;
   margin-bottom: 20px;
   text-align: left;
-  -moz-border-radius:6px;
+  overflow: hidden;
 }
 
 td, th {
